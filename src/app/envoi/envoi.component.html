@@ -1,0 +1,57 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<section class="get-in-touch">
+
+    <form class="contact-form row">
+        <fieldset class="form-field col-lg-6">
+            <legend> Emetteur </legend>
+            <div class="form-field col-lg-6">
+                <input [(ngModel)]="newEnvoi.emetteur.nom" name="nom" class="input-text js-input" type="text" required>
+                <label class="label" for="name"> Nom </label>
+            </div>
+            <div class="form-field col-lg-6 ">
+                <input [(ngModel)]="newEnvoi.emetteur.prenom" name="prenom" class="input-text js-input" type="text" required>
+                <label class="label" for="name">Prenom</label>
+            </div>
+            <div class="form-field col-lg-6 ">
+                <input [(ngModel)]="newEnvoi.emetteur.telephone" name="telephone" class="input-text js-input" type="text" required>
+                <label class="label" for="company">Telephone</label>
+            </div>
+            <div class="form-field col-lg-6 ">
+                <input [(ngModel)]="newEnvoi.emetteur.cin" name="cin" class="input-text js-input" type="text" required>
+                <label class="label" for="company">CIN</label>
+            </div>
+            <div class="form-field col-lg-6 ">
+                <input [(ngModel)]="newEnvoi.montant" name="montant" class="input-text js-input" type="number" required>
+                <label class="label" for="phone">Montant</label>
+            </div>
+            <div class="form-field col-lg-6 ">
+                <input [(ngModel)]="newEnvoi.date" name="date" class="input-text js-input" type="date" required>
+                <label class="label" for="phone">Date</label>
+            </div>
+        </fieldset>
+        <fieldset class="form-field col-lg-6">
+            <legend> Récepteur </legend>
+            <div class="form-field col-lg-6">
+                <input [(ngModel)]="newEnvoi.recepteur.nom" name="Rnom" class="input-text js-input" type="text" required>
+                <label class="label" for="name">Nom</label>
+            </div>
+            <div class="form-field col-lg-6">
+                <input [(ngModel)]="newEnvoi.recepteur.prenom" name="Rprenom" class="input-text js-input" type="text" required>
+                <label class="label" for="name">Prenom</label>
+            </div>
+            <div class="form-field col-lg-6">
+                <input [(ngModel)]="newEnvoi.recepteur.telephone" name="Rtelephone" class="input-text js-input" type="text" required>
+                <label class="label" for="name">Telephone</label>
+            </div>
+
+
+        </fieldset>
+        <div class="bouton">
+            <input class="submit-btn" type="submit" (click)="addEnvoi()" value="Valider">
+        </div>
+    </form>
+</section>

@@ -1,20 +1,36 @@
+import { EnvoiService } from './services/envoi.service';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { Routes, RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ListEmetteursComponent } from './components/list-emetteurs/list-emetteurs.component';
+import { EnvoiComponent } from './envoi/envoi.component';
+import { ListComponent } from './list/list.component';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListEmetteursComponent
+   
+    EnvoiComponent,
+   
+    ListComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    RouterModule
   ],
-  providers: [],
+  providers: [
+
+    EnvoiService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
